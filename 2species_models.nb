@@ -1,0 +1,1004 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     36983,        995]
+NotebookOptionsPosition[     34844,        924]
+NotebookOutlinePosition[     35209,        940]
+CellTagsIndexPosition[     35166,        937]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Kompet\[IAcute]ci\[OAcute]", "Section",
+ CellChangeTimes->{{3.503579060769952*^9, 3.503579064048547*^9}},
+ Background->RGBColor[0.94, 0.88, 0.94]],
+
+Cell[CellGroupData[{
+
+Cell["Initialization", "Subsubtitle",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.545302265758811*^9, 3.545302293738294*^9}, 
+   3.558801973031309*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"var", "=", 
+   RowBox[{"{", 
+    RowBox[{"p1", " ", ",", "p2"}], "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"parm", "=", 
+   RowBox[{"{", 
+    RowBox[{"a1", ",", "a2", ",", "c11", ",", "c22", ",", "c12", ",", "c21"}],
+     "}"}]}], ";"}]}], "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.503578084259082*^9, 3.503578110387639*^9}, 
+   3.503590807417112*^9, 3.545302293738495*^9}]
+}, Open  ]],
+
+Cell["equations, equillibira", "Subsubtitle",
+ CellGroupingRules->{GroupTogetherGrouping, 10002.},
+ CellChangeTimes->{{3.545313310853648*^9, 3.545313335036075*^9}, {
+  3.558801976263638*^9, 3.558801991572625*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"Kompeticio", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"p1", 
+     RowBox[{"(", 
+      RowBox[{"a1", "-", 
+       RowBox[{"c11", " ", "p1"}], "-", 
+       RowBox[{"c12", " ", "p2"}]}], ")"}]}], ",", 
+    RowBox[{"p2", 
+     RowBox[{"(", 
+      RowBox[{"a2", "-", 
+       RowBox[{"c22", " ", "p2"}], "-", 
+       RowBox[{"c21", " ", "p1"}]}], ")"}]}]}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Egyensuly", " ", "=", " ", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{"Kompeticio", " ", "==", " ", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", " ", "0"}], "}"}]}], ",", " ", "var"}], 
+   "]"}]}]}], "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.503578139947203*^9, 3.503578187882364*^9}, {
+   3.503578290878821*^9, 3.503578314065044*^9}, 3.545302293738608*^9, {
+   3.558802047356598*^9, 3.55880204860643*^9}, {3.558802080553062*^9, 
+   3.558802083352041*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"p1", " ", 
+    RowBox[{"(", 
+     RowBox[{"a1", "-", 
+      RowBox[{"c11", " ", "p1"}], "-", 
+      RowBox[{"c12", " ", "p2"}]}], ")"}]}], ",", 
+   RowBox[{"p2", " ", 
+    RowBox[{"(", 
+     RowBox[{"a2", "-", 
+      RowBox[{"c21", " ", "p1"}], "-", 
+      RowBox[{"c22", " ", "p2"}]}], ")"}]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.558801924065344*^9, 3.55880205249258*^9, 
+  3.558802085144035*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"p1", "\[Rule]", "0"}], ",", 
+     RowBox[{"p2", "\[Rule]", 
+      FractionBox["a2", "c22"]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"p1", "\[Rule]", 
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "a2"}], " ", "c12"}], "+", 
+         RowBox[{"a1", " ", "c22"}]}], 
+        RowBox[{
+         RowBox[{"c12", " ", "c21"}], "-", 
+         RowBox[{"c11", " ", "c22"}]}]]}]}], ",", 
+     RowBox[{"p2", "\[Rule]", 
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{
+         RowBox[{"a2", " ", "c11"}], "-", 
+         RowBox[{"a1", " ", "c21"}]}], 
+        RowBox[{
+         RowBox[{"c12", " ", "c21"}], "-", 
+         RowBox[{"c11", " ", "c22"}]}]]}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"p1", "\[Rule]", "0"}], ",", 
+     RowBox[{"p2", "\[Rule]", "0"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"p1", "\[Rule]", 
+      FractionBox["a1", "c11"]}], ",", 
+     RowBox[{"p2", "\[Rule]", "0"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.558801924065344*^9, 3.55880205249258*^9, 
+  3.558802085147274*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Manipulate streamplot with EQ lines",
+ FontColor->RGBColor[0.5, 0, 0.5]]], "Subsubtitle",
+ CellChangeTimes->{{3.545301760159737*^9, 3.545301801414522*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Show", "[", 
+    RowBox[{
+     RowBox[{"StreamPlot", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"p1", 
+          RowBox[{"(", 
+           RowBox[{"a1", "-", 
+            RowBox[{"c11", " ", "p1"}], "-", 
+            RowBox[{"c12", " ", "p2"}]}], ")"}]}], ",", 
+         RowBox[{"p2", 
+          RowBox[{"(", 
+           RowBox[{"a2", "-", 
+            RowBox[{"c22", " ", "p2"}], "-", 
+            RowBox[{"c21", " ", "p1"}]}], ")"}]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"p1", ",", "0", ",", "2"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"p2", ",", "0", ",", "2"}], "}"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"0", ",", "2"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "2"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+     RowBox[{"ContourPlot", "[", 
+      RowBox[{
+       RowBox[{"Evaluate", "[", 
+        RowBox[{"Thread", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"p1", 
+             RowBox[{"(", 
+              RowBox[{"a1", "-", 
+               RowBox[{"c11", " ", "p1"}], "-", 
+               RowBox[{"c12", " ", "p2"}]}], ")"}]}], ",", 
+            RowBox[{"p2", 
+             RowBox[{"(", 
+              RowBox[{"a2", "-", 
+               RowBox[{"c22", " ", "p2"}], "-", 
+               RowBox[{"c21", " ", "p1"}]}], ")"}]}]}], "}"}], "\[Equal]", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "0"}], "}"}]}], "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"p1", ",", "0", ",", "2"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"p2", ",", "0", ",", "2"}], "}"}], ",", 
+       RowBox[{"ContourStyle", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"Thick", ",", "Red"}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"Thick", ",", "Black"}], "}"}]}], "}"}]}], ",", 
+       RowBox[{"FrameLabel", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"p1", ",", "p2"}], "}"}]}]}], "]"}], ",", 
+     RowBox[{"Graphics", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"PointSize", "\[Rule]", "0.03"}], ",", "Black", ",", 
+        RowBox[{"Point", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", 
+             FractionBox["a2", "c22"]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", 
+              FractionBox[
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "a2"}], " ", "c12"}], "+", 
+                RowBox[{"a1", " ", "c22"}]}], 
+               RowBox[{
+                RowBox[{"c12", " ", "c21"}], "-", 
+                RowBox[{"c11", " ", "c22"}]}]]}], ",", 
+             RowBox[{"-", 
+              FractionBox[
+               RowBox[{
+                RowBox[{"a2", " ", "c11"}], "-", 
+                RowBox[{"a1", " ", "c21"}]}], 
+               RowBox[{
+                RowBox[{"c12", " ", "c21"}], "-", 
+                RowBox[{"c11", " ", "c22"}]}]]}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             FractionBox["a1", "c11"], ",", "0"}], "}"}]}], "}"}], "]"}]}], 
+       "}"}], "]"}]}], "]"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "c11", ",", "1", ",", 
+       "\"\<1es faj \[ODoubleDot]nkorl\[AAcute]toz\[AAcute]sa (c11)\>\""}], 
+      "}"}], ",", "0", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "a1", ",", "1", ",", 
+       "\"\<1es faj szaporod\[AAcute]si r\[AAcute]t\[AAcute]ja (a1)\>\""}], 
+      "}"}], ",", "0", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "c22", ",", "1", ",", 
+       "\"\<2es faj \[ODoubleDot]nkorl\[AAcute]toz\[AAcute]sa (c22)\>\""}], 
+      "}"}], ",", "0", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "a2", ",", "1", ",", 
+       "\"\<2es faj szaporod\[AAcute]si r\[AAcute]t\[AAcute]ja\>\""}], "}"}], 
+     ",", "0", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "c12", ",", "1", ",", "\"\<2es faj 1esre hat\[AAcute]sa (c12)\>\""}], 
+      "}"}], ",", "0", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "c21", ",", "0.5", ",", "\"\<1es faj 2esre hat\[AAcute]sa (c21)\>\""}], 
+      "}"}], ",", "0", ",", "2"}], "}"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", ",", 
+   RowBox[{"ControlPlacement", "\[Rule]", "Left"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.545301483915114*^9, 3.545301557312429*^9}, {
+   3.545301616039484*^9, 3.545301637516429*^9}, {3.545311691571491*^9, 
+   3.545311745174471*^9}, {3.558802172679234*^9, 3.558802176163245*^9}, {
+   3.558802213807965*^9, 3.558802221269056*^9}, {3.558802359398901*^9, 
+   3.558802440196926*^9}, {3.558802494474612*^9, 3.558802528249139*^9}, {
+   3.558802625881409*^9, 3.558802700191423*^9}, {3.558803076303112*^9, 
+   3.558803245245774*^9}, {3.558803948032527*^9, 3.558803979376337*^9}, {
+   3.558804051375874*^9, 3.55880406701499*^9}, {3.558804100347739*^9, 
+   3.558804164021237*^9}, 3.558804208976838*^9, {3.558804260468071*^9, 
+   3.558804275457*^9}, {3.558804308568914*^9, 3.558804322158077*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a1$$ = 1.42, $CellContext`a2$$ = 
+    1.04, $CellContext`c11$$ = 1, $CellContext`c12$$ = 1, $CellContext`c21$$ =
+     0.455, $CellContext`c22$$ = 1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`c11$$], 1, 
+       "1es faj \[ODoubleDot]nkorl\[AAcute]toz\[AAcute]sa (c11)"}, 0, 2}, {{
+       Hold[$CellContext`a1$$], 1, 
+       "1es faj szaporod\[AAcute]si r\[AAcute]t\[AAcute]ja (a1)"}, 0, 2}, {{
+       Hold[$CellContext`c22$$], 1, 
+       "2es faj \[ODoubleDot]nkorl\[AAcute]toz\[AAcute]sa (c22)"}, 0, 2}, {{
+       Hold[$CellContext`a2$$], 1, 
+       "2es faj szaporod\[AAcute]si r\[AAcute]t\[AAcute]ja"}, 0, 2}, {{
+       Hold[$CellContext`c12$$], 1, "2es faj 1esre hat\[AAcute]sa (c12)"}, 0, 
+      2}, {{
+       Hold[$CellContext`c21$$], 0.5, "1es faj 2esre hat\[AAcute]sa (c21)"}, 
+      0, 2}}, Typeset`size$$ = {360., {174., 179.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`c11$193937$$ = 0, $CellContext`a1$193938$$ = 
+    0, $CellContext`c22$193939$$ = 0, $CellContext`a2$193940$$ = 
+    0, $CellContext`c12$193941$$ = 0, $CellContext`c21$193942$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`a1$$ = 1, $CellContext`a2$$ = 
+        1, $CellContext`c11$$ = 1, $CellContext`c12$$ = 1, $CellContext`c21$$ = 
+        0.5, $CellContext`c22$$ = 1}, "ControllerVariables" :> {
+        Hold[$CellContext`c11$$, $CellContext`c11$193937$$, 0], 
+        Hold[$CellContext`a1$$, $CellContext`a1$193938$$, 0], 
+        Hold[$CellContext`c22$$, $CellContext`c22$193939$$, 0], 
+        Hold[$CellContext`a2$$, $CellContext`a2$193940$$, 0], 
+        Hold[$CellContext`c12$$, $CellContext`c12$193941$$, 0], 
+        Hold[$CellContext`c21$$, $CellContext`c21$193942$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[
+        StreamPlot[{$CellContext`p1 ($CellContext`a1$$ - $CellContext`c11$$ \
+$CellContext`p1 - $CellContext`c12$$ $CellContext`p2), $CellContext`p2 \
+($CellContext`a2$$ - $CellContext`c22$$ $CellContext`p2 - $CellContext`c21$$ \
+$CellContext`p1)}, {$CellContext`p1, 0, 2}, {$CellContext`p2, 0, 2}, 
+         PlotRange -> {{0, 2}, {0, 2}}], 
+        ContourPlot[
+         Evaluate[
+          
+          Thread[{$CellContext`p1 ($CellContext`a1$$ - $CellContext`c11$$ \
+$CellContext`p1 - $CellContext`c12$$ $CellContext`p2), $CellContext`p2 \
+($CellContext`a2$$ - $CellContext`c22$$ $CellContext`p2 - $CellContext`c21$$ \
+$CellContext`p1)} == {0, 0}]], {$CellContext`p1, 0, 2}, {$CellContext`p2, 0, 
+          2}, ContourStyle -> {{Thick, Red}, {Thick, Black}}, 
+         FrameLabel -> {$CellContext`p1, $CellContext`p2}], 
+        Graphics[{PointSize -> 0.03, Black, 
+          
+          Point[{{0, 0}, {
+            0, $CellContext`a2$$/$CellContext`c22$$}, \
+{-(((-$CellContext`a2$$) $CellContext`c12$$ + $CellContext`a1$$ \
+$CellContext`c22$$)/($CellContext`c12$$ $CellContext`c21$$ - \
+$CellContext`c11$$ $CellContext`c22$$)), -(($CellContext`a2$$ \
+$CellContext`c11$$ - $CellContext`a1$$ \
+$CellContext`c21$$)/($CellContext`c12$$ $CellContext`c21$$ - \
+$CellContext`c11$$ $CellContext`c22$$))}, \
+{$CellContext`a1$$/$CellContext`c11$$, 0}}]}]], 
+      "Specifications" :> {{{$CellContext`c11$$, 1, 
+          "1es faj \[ODoubleDot]nkorl\[AAcute]toz\[AAcute]sa (c11)"}, 0, 
+         2}, {{$CellContext`a1$$, 1, 
+          "1es faj szaporod\[AAcute]si r\[AAcute]t\[AAcute]ja (a1)"}, 0, 
+         2}, {{$CellContext`c22$$, 1, 
+          "2es faj \[ODoubleDot]nkorl\[AAcute]toz\[AAcute]sa (c22)"}, 0, 
+         2}, {{$CellContext`a2$$, 1, 
+          "2es faj szaporod\[AAcute]si r\[AAcute]t\[AAcute]ja"}, 0, 
+         2}, {{$CellContext`c12$$, 1, "2es faj 1esre hat\[AAcute]sa (c12)"}, 
+         0, 2}, {{$CellContext`c21$$, 0.5, 
+          "1es faj 2esre hat\[AAcute]sa (c21)"}, 0, 2}}, 
+      "Options" :> {ControlPlacement -> Left}, "DefaultOptions" :> {}],
+     ImageSizeCache->{839., {203., 208.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.55880427890717*^9, 3.55880432432085*^9}]
+}, {2}]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Mutualizmus", "Subtitle",
+ CellChangeTimes->{{3.50357910238791*^9, 3.50357910501492*^9}},
+ Background->RGBColor[0.94, 0.88, 0.94]],
+
+Cell[CellGroupData[{
+
+Cell["equations, equillibira", "Subsubtitle",
+ CellGroupingRules->{GroupTogetherGrouping, 10002.},
+ CellChangeTimes->{{3.545313310853648*^9, 3.545313335036075*^9}, {
+  3.558803764077082*^9, 3.558803768877127*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"Mutualizmus", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"p1", 
+     RowBox[{"(", 
+      RowBox[{"a1", "-", 
+       RowBox[{"c11", " ", "p1"}], "+", 
+       RowBox[{"c12", " ", "p2"}]}], ")"}]}], ",", 
+    RowBox[{"p2", 
+     RowBox[{"(", 
+      RowBox[{"a2", "-", 
+       RowBox[{"c22", " ", "p2"}], "+", 
+       RowBox[{"c21", " ", "p1"}]}], ")"}]}]}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Egyensuly", " ", "=", " ", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{"Mutualizmus", " ", "==", " ", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", " ", "0"}], "}"}]}], ",", " ", "var"}], 
+   "]"}]}]}], "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10002.},
+ CellChangeTimes->{{3.503578854293977*^9, 3.503578871866558*^9}, 
+   3.545302572627583*^9, 3.545313335036314*^9, {3.558803780748654*^9, 
+   3.558803782023421*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"p1", " ", 
+    RowBox[{"(", 
+     RowBox[{"a1", "-", 
+      RowBox[{"c11", " ", "p1"}], "+", 
+      RowBox[{"c12", " ", "p2"}]}], ")"}]}], ",", 
+   RowBox[{"p2", " ", 
+    RowBox[{"(", 
+     RowBox[{"a2", "+", 
+      RowBox[{"c21", " ", "p1"}], "-", 
+      RowBox[{"c22", " ", "p2"}]}], ")"}]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.558803789100747*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"p1", "\[Rule]", "0"}], ",", 
+     RowBox[{"p2", "\[Rule]", 
+      FractionBox["a2", "c22"]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"p1", "\[Rule]", 
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{
+         RowBox[{"a2", " ", "c12"}], "+", 
+         RowBox[{"a1", " ", "c22"}]}], 
+        RowBox[{
+         RowBox[{"c12", " ", "c21"}], "-", 
+         RowBox[{"c11", " ", "c22"}]}]]}]}], ",", 
+     RowBox[{"p2", "\[Rule]", 
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{
+         RowBox[{"a2", " ", "c11"}], "+", 
+         RowBox[{"a1", " ", "c21"}]}], 
+        RowBox[{
+         RowBox[{"c12", " ", "c21"}], "-", 
+         RowBox[{"c11", " ", "c22"}]}]]}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"p1", "\[Rule]", "0"}], ",", 
+     RowBox[{"p2", "\[Rule]", "0"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"p1", "\[Rule]", 
+      FractionBox["a1", "c11"]}], ",", 
+     RowBox[{"p2", "\[Rule]", "0"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.558803789103619*^9}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Manipulate streamplot with EQ lines",
+ FontColor->RGBColor[0.5, 0, 0.5]]], "Subsubtitle",
+ CellChangeTimes->{{3.545301760159737*^9, 3.545301801414522*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Show", "[", 
+    RowBox[{
+     RowBox[{"StreamPlot", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"p1", 
+          RowBox[{"(", 
+           RowBox[{"a1", "-", 
+            RowBox[{"c11", " ", "p1"}], "+", 
+            RowBox[{"c12", " ", "p2"}]}], ")"}]}], ",", 
+         RowBox[{"p2", 
+          RowBox[{"(", 
+           RowBox[{"a2", "-", 
+            RowBox[{"c22", " ", "p2"}], "+", 
+            RowBox[{"c21", " ", "p1"}]}], ")"}]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"p1", ",", "0", ",", "2"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"p2", ",", "0", ",", "2"}], "}"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"0", ",", "2"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "2"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+     RowBox[{"ContourPlot", "[", 
+      RowBox[{
+       RowBox[{"Evaluate", "[", 
+        RowBox[{"Thread", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"p1", 
+             RowBox[{"(", 
+              RowBox[{"a1", "-", 
+               RowBox[{"c11", " ", "p1"}], "+", 
+               RowBox[{"c12", " ", "p2"}]}], ")"}]}], ",", 
+            RowBox[{"p2", 
+             RowBox[{"(", 
+              RowBox[{"a2", "-", 
+               RowBox[{"c22", " ", "p2"}], "+", 
+               RowBox[{"c21", " ", "p1"}]}], ")"}]}]}], "}"}], "\[Equal]", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "0"}], "}"}]}], "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"p1", ",", "0", ",", "2"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"p2", ",", "0", ",", "2"}], "}"}], ",", 
+       RowBox[{"ContourStyle", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"Thick", ",", "Red"}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"Thick", ",", "Black"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+     RowBox[{"FrameLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"p1", ",", "p2"}], "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c11", ",", "1"}], "}"}], ",", "0", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a1", ",", "0.2"}], "}"}], ",", "0", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c22", ",", "1"}], "}"}], ",", "0", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a2", ",", "0.1"}], "}"}], ",", "0", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c12", ",", "1"}], "}"}], ",", "0", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c21", ",", "1"}], "}"}], ",", "0", ",", "2"}], "}"}], ",", 
+   RowBox[{"ControlPlacement", "\[Rule]", "Left"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.545301483915114*^9, 3.545301557312429*^9}, {
+  3.545301616039484*^9, 3.545301637516429*^9}, {3.545302766606967*^9, 
+  3.545302774562716*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a1$$ = 0.2, $CellContext`a2$$ = 
+    0.1, $CellContext`c11$$ = 1, $CellContext`c12$$ = 1, $CellContext`c21$$ = 
+    1, $CellContext`c22$$ = 1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`c11$$], 1}, 0, 1}, {{
+       Hold[$CellContext`a1$$], 0.2}, 0, 1}, {{
+       Hold[$CellContext`c22$$], 1}, 0, 1}, {{
+       Hold[$CellContext`a2$$], 0.1}, 0, 1}, {{
+       Hold[$CellContext`c12$$], 1}, 0, 2}, {{
+       Hold[$CellContext`c21$$], 1}, 0, 2}}, Typeset`size$$ = {
+    360., {174., 179.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`c11$96022$$ = 
+    0, $CellContext`a1$96023$$ = 0, $CellContext`c22$96024$$ = 
+    0, $CellContext`a2$96025$$ = 0, $CellContext`c12$96026$$ = 
+    0, $CellContext`c21$96027$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`a1$$ = 0.2, $CellContext`a2$$ = 
+        0.1, $CellContext`c11$$ = 1, $CellContext`c12$$ = 
+        1, $CellContext`c21$$ = 1, $CellContext`c22$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`c11$$, $CellContext`c11$96022$$, 0], 
+        Hold[$CellContext`a1$$, $CellContext`a1$96023$$, 0], 
+        Hold[$CellContext`c22$$, $CellContext`c22$96024$$, 0], 
+        Hold[$CellContext`a2$$, $CellContext`a2$96025$$, 0], 
+        Hold[$CellContext`c12$$, $CellContext`c12$96026$$, 0], 
+        Hold[$CellContext`c21$$, $CellContext`c21$96027$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[
+        StreamPlot[{$CellContext`p1 ($CellContext`a1$$ - $CellContext`c11$$ \
+$CellContext`p1 + $CellContext`c12$$ $CellContext`p2), $CellContext`p2 \
+($CellContext`a2$$ - $CellContext`c22$$ $CellContext`p2 + $CellContext`c21$$ \
+$CellContext`p1)}, {$CellContext`p1, 0, 2}, {$CellContext`p2, 0, 2}, 
+         PlotRange -> {{0, 2}, {0, 2}}], 
+        ContourPlot[
+         Evaluate[
+          
+          Thread[{$CellContext`p1 ($CellContext`a1$$ - $CellContext`c11$$ \
+$CellContext`p1 + $CellContext`c12$$ $CellContext`p2), $CellContext`p2 \
+($CellContext`a2$$ - $CellContext`c22$$ $CellContext`p2 + $CellContext`c21$$ \
+$CellContext`p1)} == {0, 0}]], {$CellContext`p1, 0, 2}, {$CellContext`p2, 0, 
+          2}, ContourStyle -> {{Thick, Red}, {Thick, Black}}], 
+        FrameLabel -> {$CellContext`p1, $CellContext`p2}], 
+      "Specifications" :> {{{$CellContext`c11$$, 1}, 0, 
+         1}, {{$CellContext`a1$$, 0.2}, 0, 1}, {{$CellContext`c22$$, 1}, 0, 
+         1}, {{$CellContext`a2$$, 0.1}, 0, 1}, {{$CellContext`c12$$, 1}, 0, 
+         2}, {{$CellContext`c21$$, 1}, 0, 2}}, 
+      "Options" :> {ControlPlacement -> Left}, "DefaultOptions" :> {}],
+     ImageSizeCache->{653., {203., 208.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.545301467241761*^9, 3.545301561511971*^9, 
+  3.545301638925048*^9, 3.54530278031361*^9, 3.558801000319374*^9, 
+  3.558801275148967*^9},
+ Background->RGBColor[1, 0.9, 0.8]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Pred\[AAcute]ci\[OAcute]", "Subtitle",
+ CellChangeTimes->{{3.50357910238791*^9, 3.50357910501492*^9}, {
+  3.507216832140144*^9, 3.507216837805509*^9}},
+ Background->RGBColor[0.94, 0.88, 0.94]],
+
+Cell[CellGroupData[{
+
+Cell["equations, equilibria", "Subsubtitle",
+ CellGroupingRules->{GroupTogetherGrouping, 10001.},
+ CellChangeTimes->{{3.545302341965944*^9, 3.545302403443506*^9}, {
+  3.558803820187581*^9, 3.558803825996527*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"Predacio", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"p1", 
+     RowBox[{"(", 
+      RowBox[{"a1", "-", 
+       RowBox[{"c11", " ", "p1"}], "-", 
+       RowBox[{"c12", " ", "p2"}]}], ")"}]}], ",", 
+    RowBox[{"p2", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "g"}], "+", 
+       RowBox[{"c21", " ", "p1"}]}], ")"}]}]}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Egyensuly", " ", "=", " ", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{"Predacio", " ", "==", " ", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", " ", "0"}], "}"}]}], ",", " ", "var"}], 
+   "]"}]}]}], "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10001.},
+ CellChangeTimes->{{3.50721686025867*^9, 3.507216919804587*^9}, 
+   3.545302391386344*^9, {3.558803851539175*^9, 3.558803853226207*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"p1", " ", 
+    RowBox[{"(", 
+     RowBox[{"a1", "-", 
+      RowBox[{"c11", " ", "p1"}], "-", 
+      RowBox[{"c12", " ", "p2"}]}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "g"}], "+", 
+      RowBox[{"c21", " ", "p1"}]}], ")"}], " ", "p2"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.558803863461948*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"p1", "\[Rule]", 
+      FractionBox["g", "c21"]}], ",", 
+     RowBox[{"p2", "\[Rule]", 
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "a1"}], " ", "c21"}], "+", 
+         RowBox[{"c11", " ", "g"}]}], 
+        RowBox[{"c12", " ", "c21"}]]}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"p1", "\[Rule]", "0"}], ",", 
+     RowBox[{"p2", "\[Rule]", "0"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"p1", "\[Rule]", 
+      FractionBox["a1", "c11"]}], ",", 
+     RowBox[{"p2", "\[Rule]", "0"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.558803863464599*^9}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Manipulate streamplot with EQ lines",
+ FontColor->RGBColor[0.5, 0, 0.5]]], "Subsubtitle",
+ CellChangeTimes->{{3.545301760159737*^9, 3.545301801414522*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Show", "[", 
+    RowBox[{
+     RowBox[{"StreamPlot", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"p1", 
+          RowBox[{"(", 
+           RowBox[{"a1", "-", 
+            RowBox[{"c11", " ", "p1"}], "-", 
+            RowBox[{"c12", " ", "p2"}]}], ")"}]}], ",", 
+         RowBox[{"p2", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "g"}], "+", 
+            RowBox[{"c21", " ", "p1"}]}], ")"}]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"p1", ",", "0", ",", "2"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"p2", ",", "0", ",", "2"}], "}"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"0", ",", "2"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "2"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+     RowBox[{"ContourPlot", "[", 
+      RowBox[{
+       RowBox[{"Evaluate", "[", 
+        RowBox[{"Thread", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"p1", 
+             RowBox[{"(", 
+              RowBox[{"a1", "-", 
+               RowBox[{"c11", " ", "p1"}], "-", 
+               RowBox[{"c12", " ", "p2"}]}], ")"}]}], ",", 
+            RowBox[{"p2", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "g"}], "+", 
+               RowBox[{"c21", " ", "p1"}]}], ")"}]}]}], "}"}], "\[Equal]", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "0"}], "}"}]}], "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"p1", ",", "0", ",", "2"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"p2", ",", "0", ",", "2"}], "}"}], ",", 
+       RowBox[{"ContourStyle", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"Thick", ",", "Red"}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"Thick", ",", "Black"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+     RowBox[{"FrameLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"p1", ",", "p2"}], "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c11", ",", "0"}], "}"}], ",", "0", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a1", ",", "1"}], "}"}], ",", "0", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"g", ",", "1"}], "}"}], ",", 
+     RowBox[{"-", "1"}], ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c12", ",", "1"}], "}"}], ",", "0", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c21", ",", "1"}], "}"}], ",", 
+     RowBox[{"-", "1"}], ",", "2"}], "}"}], ",", 
+   RowBox[{"ControlPlacement", "\[Rule]", "Left"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.545301483915114*^9, 3.545301557312429*^9}, {
+   3.545301616039484*^9, 3.545301637516429*^9}, {3.545301870322036*^9, 
+   3.545301879657258*^9}, {3.545301913147154*^9, 3.545301925444573*^9}, {
+   3.545302463693505*^9, 3.545302487218027*^9}, {3.54530914915754*^9, 
+   3.545309161607586*^9}, {3.545309232653082*^9, 3.545309245393871*^9}, 
+   3.54530992599389*^9, {3.558798984629551*^9, 3.55879898550421*^9}, {
+   3.558799069384649*^9, 3.558799100619847*^9}, {3.55879935063741*^9, 
+   3.558799360786119*^9}, {3.558801285119481*^9, 3.558801288512039*^9}, {
+   3.558801335714034*^9, 3.558801356179895*^9}, {3.558801411541051*^9, 
+   3.55880142756638*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a1$$ = 1, $CellContext`c11$$ = 
+    0, $CellContext`c12$$ = 1, $CellContext`c21$$ = 1, $CellContext`g$$ = 1, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`c11$$], 0}, 0, 2}, {{
+       Hold[$CellContext`a1$$], 1}, 0, 2}, {{
+       Hold[$CellContext`g$$], 1}, -1, 2}, {{
+       Hold[$CellContext`c12$$], 1}, 0, 2}, {{
+       Hold[$CellContext`c21$$], 1}, -1, 2}}, Typeset`size$$ = {
+    360., {174., 179.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`c11$131649$$ = 
+    0, $CellContext`a1$131650$$ = 0, $CellContext`g$131651$$ = 
+    0, $CellContext`c12$131652$$ = 0, $CellContext`c21$131653$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`a1$$ = 1, $CellContext`c11$$ = 
+        0, $CellContext`c12$$ = 1, $CellContext`c21$$ = 1, $CellContext`g$$ = 
+        1}, "ControllerVariables" :> {
+        Hold[$CellContext`c11$$, $CellContext`c11$131649$$, 0], 
+        Hold[$CellContext`a1$$, $CellContext`a1$131650$$, 0], 
+        Hold[$CellContext`g$$, $CellContext`g$131651$$, 0], 
+        Hold[$CellContext`c12$$, $CellContext`c12$131652$$, 0], 
+        Hold[$CellContext`c21$$, $CellContext`c21$131653$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[
+        StreamPlot[{$CellContext`p1 ($CellContext`a1$$ - $CellContext`c11$$ \
+$CellContext`p1 - $CellContext`c12$$ $CellContext`p2), $CellContext`p2 \
+(-$CellContext`g$$ + $CellContext`c21$$ $CellContext`p1)}, {$CellContext`p1, 
+          0, 2}, {$CellContext`p2, 0, 2}, PlotRange -> {{0, 2}, {0, 2}}], 
+        ContourPlot[
+         Evaluate[
+          
+          Thread[{$CellContext`p1 ($CellContext`a1$$ - $CellContext`c11$$ \
+$CellContext`p1 - $CellContext`c12$$ $CellContext`p2), $CellContext`p2 \
+(-$CellContext`g$$ + $CellContext`c21$$ $CellContext`p1)} == {0, 
+            0}]], {$CellContext`p1, 0, 2}, {$CellContext`p2, 0, 2}, 
+         ContourStyle -> {{Thick, Red}, {Thick, Black}}], 
+        FrameLabel -> {$CellContext`p1, $CellContext`p2}], 
+      "Specifications" :> {{{$CellContext`c11$$, 0}, 0, 
+         2}, {{$CellContext`a1$$, 1}, 0, 2}, {{$CellContext`g$$, 1}, -1, 
+         2}, {{$CellContext`c12$$, 1}, 0, 2}, {{$CellContext`c21$$, 1}, -1, 
+         2}}, "Options" :> {ControlPlacement -> Left}, "DefaultOptions" :> {}],
+     ImageSizeCache->{653., {203., 208.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.545301467241761*^9, 3.545301561511971*^9, 3.545301638925048*^9, 
+   3.54530192702554*^9, 3.545302520825527*^9, 3.545309163322922*^9, 
+   3.545309249607225*^9, 3.545309926902515*^9, 3.55879899373116*^9, {
+   3.558799076193536*^9, 3.558799104052498*^9}, 3.558799361585478*^9, 
+   3.558801290041436*^9, 3.558801369158894*^9, {3.558801412770436*^9, 
+   3.558801428328241*^9}},
+ Background->RGBColor[1, 0.9, 0.8]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowToolbars->"EditBar",
+WindowSize->{1366, 719},
+WindowMargins->{{Automatic, 1024}, {Automatic, 0}},
+FrontEndVersion->"8.0 for Linux x86 (32-bit) (October 10, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 152, 2, 78, "Section"],
+Cell[CellGroupData[{
+Cell[744, 28, 182, 3, 31, "Subsubtitle",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[929, 33, 452, 12, 50, "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}]
+}, Open  ]],
+Cell[1396, 48, 213, 3, 31, "Subsubtitle",
+ CellGroupingRules->{GroupTogetherGrouping, 10002.}],
+Cell[1612, 53, 933, 26, 50, "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[2548, 81, 455, 14, 30, "Output"],
+Cell[3006, 97, 1203, 39, 47, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4246, 141, 215, 3, 47, "Subsubtitle"],
+Cell[CellGroupData[{
+Cell[4486, 148, 5611, 151, 256, "Input"],
+Cell[10100, 301, 4810, 88, 428, "Output"]
+}, {2}]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14956, 395, 136, 2, 70, "Subtitle"],
+Cell[CellGroupData[{
+Cell[15117, 401, 213, 3, 31, "Subsubtitle",
+ CellGroupingRules->{GroupTogetherGrouping, 10002.}],
+Cell[15333, 406, 862, 25, 50, "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10002.}]
+}, Open  ]],
+Cell[16210, 434, 409, 13, 30, "Output"],
+Cell[16622, 449, 1131, 37, 47, "Output"],
+Cell[CellGroupData[{
+Cell[17778, 490, 215, 3, 47, "Subsubtitle"],
+Cell[CellGroupData[{
+Cell[18018, 497, 3208, 91, 123, "Input"],
+Cell[21229, 590, 3677, 69, 444, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24967, 666, 198, 3, 70, "Subtitle"],
+Cell[CellGroupData[{
+Cell[25190, 673, 212, 3, 31, "Subsubtitle",
+ CellGroupingRules->{GroupTogetherGrouping, 10001.}],
+Cell[25405, 678, 810, 24, 50, "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10001.}]
+}, Open  ]],
+Cell[26230, 705, 390, 13, 30, "Output"],
+Cell[26623, 720, 726, 24, 47, "Output"],
+Cell[CellGroupData[{
+Cell[27374, 748, 215, 3, 47, "Subsubtitle"],
+Cell[CellGroupData[{
+Cell[27614, 755, 3590, 96, 123, "Input"],
+Cell[31207, 853, 3597, 66, 444, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
